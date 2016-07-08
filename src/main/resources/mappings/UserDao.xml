@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hsgene.dao.UserDao">
+
+    <select id="getCount" resultType="int">
+        SELECT COUNT(1) FROM USER
+    </select>
+
+    <select id="getList" resultType="User">
+      SELECT * FROM USER
+    </select>
+    <insert id="insert" parameterType="User">
+        INSERT INTO USER (userCode, userName, userPassword)
+        VALUES (#{userCode},#{userName},#{userPassword},#{birthday})
+    </insert>
+
+    <update id="update" parameterType="User">
+        UPDATE USER SET
+        userCode=#{userCode},
+        userName=#{userName},
+        userPassword=#{userPassword},
+        birthday=#{birthday}
+        WHERE id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="User">
+        DELETE FROM USER
+        WHERE id=#{id}
+    </delete>
+
+</mapper>
