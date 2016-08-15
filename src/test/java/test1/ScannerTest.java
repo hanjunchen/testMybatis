@@ -11,7 +11,7 @@ public class ScannerTest {
 
     @Test
     public void show(){
-        // junittest不支持Scanner对象，只能在main方法中打印
+        // junitTest不支持Scanner对象，只能在main方法中打印
         Scanner scanner = new Scanner(System.in);
         String s = scanner.next();
         System.out.println(s);
