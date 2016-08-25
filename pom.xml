@@ -59,6 +59,7 @@
     </dependencies>
     <build>
         <finalName>testMybatis</finalName>
+        <!-- 需要编译的文件目录 -->
         <resources>
             <resource>
                 <directory>src/main/java</directory>
