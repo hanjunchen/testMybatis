@@ -9,9 +9,10 @@ import java.util.Date;
 /**
  * Created by lenovo on 2016/6/16.
  */
+
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 public class User {
 
     private Integer id;
@@ -19,6 +20,7 @@ public class User {
     private String userName;
     private String userPassword;
     private String birthday;// 只要属性名和字段名相同，就算类型不一样，mybatis也会自动类型转换
+    private Role role;
 
     public User(Integer id) {
         this.id = id;
@@ -31,11 +33,12 @@ public class User {
         this.birthday = birthday;
     }
 
-    public User(Integer id, String userCode, String userName, String userPassword) {
+    public User(Integer id, String userCode, String userName, String userPassword,String birthday) {
         this.id = id;
         this.userCode = userCode;
         this.userName = userName;
         this.userPassword = userPassword;
+        this.birthday = birthday;
     }
 
 }

@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Created by lenovo on 2016/6/25.
+ * Created by hjc on 2016/6/25.
  */
 public class MyBatisUtil {
 
