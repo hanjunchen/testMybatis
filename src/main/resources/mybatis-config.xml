@@ -6,7 +6,7 @@
     <properties resource="db.properties"/>
     <!-- 配置mybatis的log实现为LOG4J -->
     <settings>
-        <!-- 设置日志类，在控制台可以输出sql语句及参数信息 -->
+        <!-- 设置日志类，在控制台可以输出sql语句及参数信息，并且选择log4j作为输出日志 -->
         <setting name="logImpl" value="LOG4J"/>
         <!-- 全局性地启用或禁用所有在mapper配置文件中配置的缓存 -->
         <setting name="cacheEnabled" value="true"/>
