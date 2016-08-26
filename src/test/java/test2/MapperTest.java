@@ -43,8 +43,7 @@ public class MapperTest {
             sqlSession = MyBatisUtil.getSqlSession();
             List<User> list = sqlSession.getMapper(UserDao.class).getList();
             if (CollectionUtil.isNotEmpty(list)) {
-                // list.forEach(x -> logger.debug(x.getUserName() + "," + new SimpleDateFormat("yyyy-MM-dd").format(x.getBirthday() != null ? x.getBirthday() : new Date())));
-                list.forEach(x -> logger.debug(x.getUserName() + "," + x.getRole().getRoleName()));
+                list.forEach(x -> logger.debug(x.getUserName() + "---" + x.getRole().getRoleName()));
             } else {
                 logger.debug("没有查询到相应列表");
             }

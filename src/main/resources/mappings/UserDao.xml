@@ -15,7 +15,7 @@
     </select>
 
     <!-- 完整sql结果集和对象的映射关系，这里的column都是通过AS起的别名 -->
-    <resultMap id="userMap" type="User">
+    <!--<resultMap id="userMap" type="User">
         <id property="id" column="id"/>
         <result property="" column=""></result>
         <association property="" javaType="">
@@ -26,7 +26,7 @@
             <id property="" column=""></id>
             <result property="" column=""></result>
         </collection>
-    </resultMap>
+    </resultMap>-->
 
     <select id="getList" resultType="User">
       SELECT u.*,r.roleName AS "role.roleName"
