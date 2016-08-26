@@ -32,7 +32,7 @@ public class UserTest {
             sqlSession = sqlSessionFactory.openSession(true);// 设置事务提交，查询不涉及事务
             // 从sql映射文件中读取sql语句并执行
             count = sqlSession.selectOne("com.hsgene.dao.UserMapper.count");
-            // 使用log4j打印输出信息到日志文件中，因为sout方式太占资源
+            // 使用log4j打印输出信息到日志文件中，sout方式太占资源
             logger.debug("count is " + count);
         } catch (IOException e) {
             e.printStackTrace();

@@ -11,7 +11,7 @@ import java.io.InputStream;
 /**
  * Created by lenovo on 2016/6/25.
  */
-public class MyBatisUtils {
+public class MyBatisUtil {
 
     private static SqlSessionFactory sqlSessionFactory;
 

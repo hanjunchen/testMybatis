@@ -1,7 +1,7 @@
 package test2;
 
 import com.hsgene.entity.User;
-import com.hsgene.util.MyBatisUtils;
+import com.hsgene.util.MyBatisUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -50,14 +50,14 @@ public class UserTest {
     public void getList() {
         SqlSession sqlSession = null;
         try {
-            sqlSession = MyBatisUtils.getSqlSession();
+            sqlSession = MyBatisUtil.getSqlSession();
             // 查询不需要提交事务
             List<User> list = sqlSession.selectList("com.hsgene.dao.UserDao.getList");
             list.forEach(x -> logger.debug(x.getUserName()));
         } catch (Exception e) {
             sqlSession.rollback();
         } finally {
-            MyBatisUtils.closeSession(sqlSession);
+            MyBatisUtil.closeSession(sqlSession);
         }
     }
 
@@ -66,14 +66,14 @@ public class UserTest {
         User user = new User("2965", "小明", "1234",new Date().toString());
         SqlSession sqlSession = null;
         try {
-            sqlSession = MyBatisUtils.getSqlSession();
+            sqlSession = MyBatisUtil.getSqlSession();
             sqlSession.insert("com.hsgene.dao.UserDao.insert", user);
             sqlSession.commit();
             logger.debug("增加用户成功！");
         } catch (Exception e) {
             sqlSession.rollback();
         } finally {
-            MyBatisUtils.closeSession(sqlSession);
+            MyBatisUtil.closeSession(sqlSession);
         }
     }
 
@@ -82,14 +82,14 @@ public class UserTest {
         User user = new User(11, "2477", "小黑", "3334" ,new Date().toString());
         SqlSession sqlSession = null;
         try {
-            sqlSession = MyBatisUtils.getSqlSession();
+            sqlSession = MyBatisUtil.getSqlSession();
             sqlSession.update("com.hsgene.dao.UserDao.update", user);
             sqlSession.commit();
             logger.debug("更新用户成功！");
         } catch (Exception e) {
             sqlSession.rollback();
         } finally {
-            MyBatisUtils.closeSession(sqlSession);
+            MyBatisUtil.closeSession(sqlSession);
         }
     }
 
@@ -98,14 +98,14 @@ public class UserTest {
         User user = new User(11);
         SqlSession sqlSession = null;
         try {
-            sqlSession = MyBatisUtils.getSqlSession();
+            sqlSession = MyBatisUtil.getSqlSession();
             sqlSession.delete("com.hsgene.dao.UserDao.delete", user);
             sqlSession.commit();
             logger.debug("删除用户成功！");
         } catch (Exception e) {
             sqlSession.rollback();
         } finally {
-            MyBatisUtils.closeSession(sqlSession);
+            MyBatisUtil.closeSession(sqlSession);
         }
     }
 
