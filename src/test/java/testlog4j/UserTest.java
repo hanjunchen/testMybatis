@@ -31,7 +31,7 @@ public class UserTest {
             // 获取与数据库通信的sqlSession会话对象
             sqlSession = sqlSessionFactory.openSession(true);// 设置事务提交，查询不涉及事务
             // 从sql映射文件中读取sql语句并执行
-            count = sqlSession.selectOne("com.hsgene.dao.UserMapper.count");
+            count = sqlSession.selectOne("com.hsgene.dao.UserDao.count");
             // 使用log4j打印输出信息到日志文件中，因为sout方式太占资源
             logger.debug("count is " + count);
         } catch (IOException e) {
