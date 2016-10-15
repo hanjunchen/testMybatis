@@ -15,7 +15,7 @@ public class MyBatisUtils {
 
     private static SqlSessionFactory sqlSessionFactory;
 
-    // 第一次加载类后便会为其赋值
+    // 第一次加载类后便会为其赋值，SqlSessionFactory是一个单例
     static {
         try {
             InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
