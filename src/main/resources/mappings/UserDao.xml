@@ -2,7 +2,6 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- 注意：命名空间是mapper.xml文件的名称 -->
 <mapper namespace="com.hsgene.dao.UserDao">
 
     <sql id="">
