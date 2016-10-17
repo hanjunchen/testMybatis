@@ -15,7 +15,7 @@
     </settings>
     <typeAliases>
         <!--<typeAlias type="com.hsgene.entity.User" alias="User" />-->
-        <!-- 包别名写sql语句返回类类型和参数类型时就可以不用写全限定名 -->
+        <!-- 包别名写sql语句返回类类型和参数类型时就可以不用写完全限定名 -->
         <package name="com.hsgene.entity"/>
     </typeAliases>
     <environments default="development">
