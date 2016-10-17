@@ -33,7 +33,7 @@ public class UserTest {
             SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
             // 获取与数据库通信的sqlSession会话对象
             sqlSession = sqlSessionFactory.openSession(true);
-            // 从sql映射文件中读取sql语句并执行
+            // 从sql映射文件中读取sql语句并执行  // 此种放获取的xml文件中命名空间，即接口的目录
             count = sqlSession.selectOne("com.hsgene.dao.UserDao.getCount");
             // 使用log4j打印输出信息到日志文件中，因为sout方式太占资源
             logger.debug("count is " + count);
